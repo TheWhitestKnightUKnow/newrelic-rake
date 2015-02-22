@@ -4,7 +4,7 @@ DependencyDetection.defer do
   @name = :rake
 
   depends_on do
-    defined?(::Rake) and not ::NewRelic::Control.instance['disable_rake']
+    defined?(::Rake::Task) and not ::NewRelic::Control.instance['disable_rake']
   end
 
   executes do
